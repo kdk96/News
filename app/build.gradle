@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.kdk96.news"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+
+    implementation "com.android.support:appcompat-v7:$support_version"
+    implementation "com.android.support:recyclerview-v7:$support_version"
+    implementation "com.android.support:design:$support_version"
+    implementation "com.android.support.constraint:constraint-layout:$constraintlayout_version"
+    implementation "com.android.support:cardview-v7:$support_version"
+
+
+    implementation "com.hannesdorfmann:adapterdelegates3:3.1.0"
+
+
+    implementation 'com.android.support:support-v4:28.0.0'
+    testImplementation 'junit:junit:4.12'
+
+    implementation "com.arello-mobile:moxy:$moxy_version"
+    implementation "com.arello-mobile:moxy-app-compat:$moxy_version"
+    kapt "com.arello-mobile:moxy-compiler:$moxy_version"
+
+    implementation "ru.terrakok.cicerone:cicerone:$cicerone_version"
+
+    implementation "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+
+
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
+
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
+    implementation project(':common')
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    kapt "com.github.bumptech.glide:compiler:$glide_version"
+
+    implementation "com.jakewharton.threetenabp:threetenabp:$threetenabp_version"
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    kapt "android.arch.persistence.room:compiler:$room_version"
+    implementation "android.arch.persistence.room:rxjava2:$room_version"
+
+}

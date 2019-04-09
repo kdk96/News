@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="loading">loading…</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="network_error">Network error</string>
+    <string name="retry">Retry</string>
+    <string name="prizes">Prizes</string>
+</resources>
